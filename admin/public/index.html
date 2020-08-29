@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script>
+      function resetBasePx(){
+        var w = (document.documentElement.clientWidth || document.body.clientWidth)
+        if(w > 1920) {
+          w = 1920
+        }else if(w < 1200) {
+          w = 1400
+        }
+        document.getElementsByTagName('html')[0].style.fontSize = w / 100 + 'px'
+      }
+
+      resetBasePx()
+  
+		window.onresize = function(){
+			resetBasePx()
+		}
+      var APIURL = 'http://charge.hundcang.com/admin/'
+    </script>
+  </head>
+  <body>
+    <div id="app" style='height: 100%;'></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
