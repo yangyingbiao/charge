@@ -92,7 +92,7 @@ export default {
         height: 100%;
     }
     .x-page-scroll-container{
-        padding: 30px 20px;
+        padding: 30px 20px 0 20px;
         height: 100%;
         overflow-y:auto;
     }
